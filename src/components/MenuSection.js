@@ -3,8 +3,8 @@ import MenuItem from "./MenuItem";
 
 const MenuSection = ({ category, menuItems, addItem }) => {
   //TODO: Filter items by # of clicks
-  const items = menuItems.map((item) => (
-    <MenuItem addItem={addItem} price={item.price} name={item.name} />
+  const items = menuItems.map((item, i) => (
+    <MenuItem key={i} addItem={addItem} price={item.price} name={item.name} />
   ));
   return (
     <>

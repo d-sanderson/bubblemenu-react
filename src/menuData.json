@@ -1,0 +1,8 @@
+{ "test": {
+    "item1": {
+        "name" : "Brussels",
+        "price": 8
+    }
+}
+
+}

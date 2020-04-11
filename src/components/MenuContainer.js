@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import MenuSection from "./MenuSection";
 import TotalDisplay from "./TotalDisplay";
+import menu from "../menuData.json"
 const MenuContainer = () => {
+    console.log(menu)
   const apps = [
     { name: "Brussells", price: 8 },
     { name: "Harissa Dip", price: 11 },
