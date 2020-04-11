@@ -38,16 +38,16 @@ function App() {
     { name: "Bananna ShortBread", price: 7 },
     { name: "Green Chile Apple Empanada", price: 8 },
   ];
-
+const trackClicked = (name, price) => console.log(`${name} was clicked and cost ${price}`);
   return (
     <div className="container">
       <h1 className="text-5xl py-8">Sixty Six Acres Menu</h1>
       <TotalDisplay />
-      <MenuContainer category="Appetizers" menuItems={apps} />
-      <MenuContainer category="Flatbreads" menuItems={flatbreads} />
-      <MenuContainer category="Sandwiches" menuItems={sandwiches} />
-      <MenuContainer category="Grain Bowls" menuItems={grain_bowls} />
-      <MenuContainer category="Desserts" menuItems={desserts} />
+      <MenuContainer trackClicked={trackClicked} category="Appetizers" menuItems={apps} />
+      <MenuContainer trackClicked={trackClicked} category="Flatbreads" menuItems={flatbreads} />
+      <MenuContainer trackClicked={trackClicked} category="Sandwiches" menuItems={sandwiches} />
+      <MenuContainer trackClicked={trackClicked} category="Grain Bowls" menuItems={grain_bowls} />
+      <MenuContainer trackClicked={trackClicked} category="Desserts" menuItems={desserts} />
     </div>
   );
 }
