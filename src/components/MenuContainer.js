@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuSection from "./MenuSection";
 import TotalDisplay from "./TotalDisplay";
 const MenuContainer = () => {
@@ -38,34 +38,36 @@ const MenuContainer = () => {
     { name: "Bananna ShortBread", price: 7 },
     { name: "Green Chile Apple Empanada", price: 8 },
   ];
-  const trackClicked = (name, price) =>
-    console.log(`${name} was clicked and cost ${price}`);
+  const [items, setItems] = useState([]);
+  const addItem = (name, price) => {
+    setItems([...items, [name, price]]);
+  };
   return (
     <div className="container">
       <h1 className="text-5xl py-8">Sixty Six Acres Menu</h1>
-      <TotalDisplay />
+      <TotalDisplay items={items}/>
       <MenuSection
-        trackClicked={trackClicked}
+        addItem={addItem}
         category="Appetizers"
         menuItems={apps}
       />
       <MenuSection
-        trackClicked={trackClicked}
+        addItem={addItem}
         category="Flatbreads"
         menuItems={flatbreads}
       />
       <MenuSection
-        trackClicked={trackClicked}
+        addItem={addItem}
         category="Sandwiches"
         menuItems={sandwiches}
       />
       <MenuSection
-        trackClicked={trackClicked}
+        addItem={addItem}
         category="Grain Bowls"
         menuItems={grain_bowls}
       />
       <MenuSection
-        trackClicked={trackClicked}
+        addItem={addItem}
         category="Desserts"
         menuItems={desserts}
       />

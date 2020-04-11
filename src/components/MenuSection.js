@@ -1,10 +1,10 @@
 import React from "react";
 import MenuItem from "./MenuItem";
 
-const MenuSection = ({ category, menuItems, trackClicked }) => {
+const MenuSection = ({ category, menuItems, addItem }) => {
   //TODO: Filter items by # of clicks
   const items = menuItems.map((item) => (
-    <MenuItem trackClicked={trackClicked} price={item.price} name={item.name} />
+    <MenuItem addItem={addItem} price={item.price} name={item.name} />
   ));
   return (
     <>
