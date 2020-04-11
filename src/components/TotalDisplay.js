@@ -1,12 +1,8 @@
 import React from "react";
+import OrderItem from "./OrderItem";
 
 const TotalDisplay = ({ items }) => {
-  let orderItems = items.map((el, i) => (
-    <div key={i} className="text-lg lead flex justify-between">
-      <div className="ml-5">{`${el[0]}`}</div>{" "}
-      <div className="mr-10 font-bold">{`$${el[1]}`}</div>
-    </div>
-  ));
+  let orderItems = items.map((el, i) => <OrderItem key={i} el={el}/>);
   return (
     <div className="mx-auto h-32 border-2 border-black bg-indigo-300 overflow-y-scroll">
       {orderItems}
