@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import MenuSection from "./MenuSection";
 import TotalDisplay from "./TotalDisplay";
-import menu from "../menuData"
+import {appetizers, flatbreads, sandwiches, grain_bowls, desserts } from "../menuData"
+
 const MenuContainer = () => {
 
   const [items, setItems] = useState([]);
@@ -15,27 +16,27 @@ const MenuContainer = () => {
       <MenuSection
         addItem={addItem}
         category="Appetizers"
-        menuItems={menu.appetizers}
+        menuItems={appetizers}
       />
       <MenuSection
         addItem={addItem}
         category="Flatbreads"
-        menuItems={menu.flatbreads}
+        menuItems={flatbreads}
       />
       <MenuSection
         addItem={addItem}
         category="Sandwiches"
-        menuItems={menu.sandwiches}
+        menuItems={sandwiches}
       />
       <MenuSection
         addItem={addItem}
         category="Grain Bowls"
-        menuItems={menu.grain_bowls}
+        menuItems={grain_bowls}
       />
       <MenuSection
         addItem={addItem}
         category="Desserts"
-        menuItems={menu.desserts}
+        menuItems={desserts}
       />
     </div>
   );
